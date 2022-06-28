@@ -11,7 +11,6 @@ public class DemoAutomation {
 		System.setProperty("webdriver.edge.driver", "E:\\test_files\\selenium\\selenium-demo\\selenium-tools\\browserdrivers\\msedgedriver.exe");
 
 		
-		
 //		ChromeDriver driver = new ChromeDriver();
 //		FirefoxDriver driver = new FirefoxDriver();
 		EdgeDriver driver = new EdgeDriver();
