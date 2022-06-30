@@ -2,15 +2,31 @@ package UI;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTest {
 
-	public static void main(String[] args) {
+	public static String browser = "Chrome";
+	public static FirefoxDriver driver;
+	public static ChromeDriver driver1;
+	
+	public static void main(String[] args) { 
 		
-		WebDriverManager.chromedriver().setup();
-		ChromeDriver driver = new ChromeDriver();
+		if(browser.equals("Firefox"))
+		{
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
+		else if(browser.equals("Chrome")) 
+		{
+			WebDriverManager.chromedriver().setup();
+			driver1 = new ChromeDriver();
+		}
+		
+//		WebDriverManager.chromedriver().setup();
+//		ChromeDriver driver = new ChromeDriver();
 		
 		driver.get("https://saucedemo.com/");
 		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys("standard_user");
