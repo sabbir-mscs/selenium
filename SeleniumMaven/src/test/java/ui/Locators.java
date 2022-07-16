@@ -1,4 +1,4 @@
-package UI;
+package ui;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LoginTest {
+public class Locators {
 
 	public static String browser = "firefox";  //External configuration - XLS, CSV
 	public static WebDriver driver;
@@ -35,14 +35,12 @@ public class LoginTest {
 //		WebDriverManager.chromedriver().setup();
 //		ChromeDriver driver = new ChromeDriver();
 		
-		driver.get("https://saucedemo.com/");
+		driver.get("https://www.saucedemo.com/");
 		driver.findElement(By.xpath("//*[@id=\"user-name\"]")).sendKeys("standard_user");
-		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
-		driver.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
-		driver.close();
+//		driver.findElement(By.linkText("Locators")).click();
+//		WebElement passField = driver.findElement(By.id("password"));
 		
-		
-		
+//		driver.findElement(withTagName("input").above(passField)).sendKeys("Testing");
 	}
 
 }
