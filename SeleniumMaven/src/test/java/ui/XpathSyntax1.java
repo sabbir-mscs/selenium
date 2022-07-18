@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class XpathSyntax {
+public class XpathSyntax1 {
 
 	public static String browser = "firefox";  //External configuration - XLS, CSV
 	public static WebDriver driver;
