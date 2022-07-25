@@ -8,8 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//XPath Axes - Parent, Child, Self
-public class XpathSyntaxAxes7 {
+//XPath Axes - Descendant, Descendant-or-Self
+public class XpathSyntaxAxes8 {
 
 	public static String browser = "chrome";
 	public static WebDriver driver;
@@ -26,16 +26,14 @@ public class XpathSyntaxAxes7 {
 			driver = new EdgeDriver();
 		}
 
-		driver.get("https://developer.salesforce.com/signup");
-		
-		// Parent
-		driver.findElement(By.xpath("//select[@name='country']//parent::form")).sendKeys("Typing Text...");
+		driver.get("https://www.saucedemo.com/");
 
-		// Child
-		driver.findElement(By.xpath("//select[@name='country']//child::option[2]]")).sendKeys("Password");
-		
-		// Self
-		driver.findElement(By.xpath("//select[@name='country']//self::select"));
+		driver.findElement(By.xpath("//div[@class='form_group']//descendant::input")).sendKeys("AAA");
+
+		driver.findElement(By.xpath("//div[@class='login_credentals_wrap]//descemdamt-or-self::div"));
+
+		//Best practice
+		driver.findElement(By.xpath("//*[@class='login_credentials_wrap']//descendant::div[@id='login_credentials']")); 
 
 	}
 
