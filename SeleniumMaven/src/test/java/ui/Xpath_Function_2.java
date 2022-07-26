@@ -8,9 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//XPath Axes - Parent, Child, Self
-public class XpathSyntaxAxes7 {
-
+//XPath Contains Function
+public class Xpath_Function_2 {
+	
 	public static String browser = "chrome";
 	public static WebDriver driver;
 
@@ -25,18 +25,9 @@ public class XpathSyntaxAxes7 {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-
+		
 		driver.get("https://developer.salesforce.com/signup");
-		
-		// Parent
-		driver.findElement(By.xpath("//select[@name='country']//parent::form")).sendKeys("Typing Text...");
-
-		// Child
-		driver.findElement(By.xpath("//select[@name='country']//child::option[2]]")).sendKeys("Password");
-		
-		// Self
-		driver.findElement(By.xpath("//select[@name='country']//self::select"));
-
+		driver.findElement(By.xpath("//input[contains(@name,'email')]")).sendKeys("TestEmail@gmail.com");
 	}
 
 }

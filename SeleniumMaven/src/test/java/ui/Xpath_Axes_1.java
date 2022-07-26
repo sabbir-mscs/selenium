@@ -8,8 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//XPath AND | OR Operator 
-public class XpathSyntax6 {
+//XPath Axes - Parent, Child, Self
+public class Xpath_Axes_1 {
 
 	public static String browser = "chrome";
 	public static WebDriver driver;
@@ -26,13 +26,16 @@ public class XpathSyntax6 {
 			driver = new EdgeDriver();
 		}
 
-		driver.get("https://www.saucedemo.com/");
+		driver.get("https://developer.salesforce.com/signup");
+		
+		// Parent
+		driver.findElement(By.xpath("//select[@name='country']//parent::form")).sendKeys("Typing Text...");
 
-		// OR
-		driver.findElement(By.xpath("//input[@placeholder='username' or @name='user-name']")).sendKeys("Typing Text...");
-
-		// AND
-		driver.findElement(By.xpath("//input[@placeholder='Password' and @type='password']")).sendKeys("Password");
+		// Child
+		driver.findElement(By.xpath("//select[@name='country']//child::option[2]]")).sendKeys("Password");
+		
+		// Self
+		driver.findElement(By.xpath("//select[@name='country']//self::select"));
 
 	}
 

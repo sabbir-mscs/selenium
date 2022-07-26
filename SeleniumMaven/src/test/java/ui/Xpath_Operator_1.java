@@ -8,8 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//XPath Axes - Descendant, Descendant-or-Self
-public class XpathSyntaxAxes8 {
+//XPath AND | OR Operator 
+public class Xpath_Operator_1 {
 
 	public static String browser = "chrome";
 	public static WebDriver driver;
@@ -28,12 +28,11 @@ public class XpathSyntaxAxes8 {
 
 		driver.get("https://www.saucedemo.com/");
 
-		driver.findElement(By.xpath("//div[@class='form_group']//descendant::input")).sendKeys("AAA");
+		// OR
+		driver.findElement(By.xpath("//input[@placeholder='username' or @name='user-name']")).sendKeys("Typing Text...");
 
-		driver.findElement(By.xpath("//div[@class='login_credentals_wrap]//descemdamt-or-self::div"));
-
-		//Best practice
-		driver.findElement(By.xpath("//*[@class='login_credentials_wrap']//descendant::div[@id='login_credentials']")); 
+		// AND
+		driver.findElement(By.xpath("//input[@placeholder='Password' and @type='password']")).sendKeys("Password");
 
 	}
 

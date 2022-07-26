@@ -1,5 +1,6 @@
 package ui;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -7,9 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//Relative and Absolute XPath
-public class XpathSyntax2 {
-	
+//XPath Axes - Preceding, Preceding-sibling
+public class Xpath_Axes_5 {
+
 	public static String browser = "chrome";
 	public static WebDriver driver;
 
@@ -24,6 +25,14 @@ public class XpathSyntax2 {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
+
+		driver.get("https://www.saucedemo.com/");
+
+		//div[@class='login_wrapper-inner']//ancestor::div[@class='login_wrapper'] 
+		
+		driver.findElement(By.xpath("div[@class='login_wrapper-inner']//preceding::div[@class='login_wrapper']"));
+		
+		driver.findElement(By.xpath("div[@class='login_wrapper-inner']//preceding-sibling::div[@class='login_wrapper']"));
 
 	}
 

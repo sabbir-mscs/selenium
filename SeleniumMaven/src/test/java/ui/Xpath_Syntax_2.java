@@ -1,6 +1,5 @@
- package ui;
+package ui;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -8,8 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//XPath Function - text() Method 
-public class XpathSyntax5 {
+//Relative and Absolute XPath
+public class Xpath_Syntax_2 {
 	
 	public static String browser = "chrome";
 	public static WebDriver driver;
@@ -25,9 +24,7 @@ public class XpathSyntax5 {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-		
-		driver.get("https://developer.salesforce.com/signup");
-		driver.findElement(By.xpath("//a[text()='Terms of Use']")).sendKeys("TestEmail@gmail.com");
+
 	}
 
 }
