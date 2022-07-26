@@ -1,5 +1,6 @@
 package ui;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -7,7 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Xpath_CSS_1 {
+//CSS Selector - By ID
+public class Xpath_CSS_Selector_1 {
 
 	public static String browser = "firefox"; // External configuration - XLS, CSV
 	public static WebDriver driver;
@@ -25,8 +27,12 @@ public class Xpath_CSS_1 {
 			driver = new EdgeDriver();
 		}
 
-		driver.get("https://developer.salesforce.com/signup");
-		driver.close();
+		driver.get("https://saucedemo.com");
+		
+		driver.findElement(By.cssSelector("input[id=user-name]")).sendKeys("TEST");
+		driver.findElement(By.cssSelector("input[id=password]")).sendKeys("TEST");
+		
+//		driver.close();
 
 	}
 }
