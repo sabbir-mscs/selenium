@@ -8,8 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-//CSS Selector - By Class
-public class Xpath_CSS_Selector_2 {
+//CSS Selector - Multiple Attribute Selector
+public class Xpath_CSS_Selector_3 {
 
 	public static String browser = "firefox"; // External configuration - XLS, CSV
 	public static WebDriver driver;
@@ -29,8 +29,8 @@ public class Xpath_CSS_Selector_2 {
 
 		driver.get("https://saucedemo.com/");
 		
-//		driver.findElement(By.cssSelector("input[class=submit-button]")).click();
-		driver.findElement(By.cssSelector("input.submit-button")).click();
+
+		driver.findElement(By.cssSelector("input.submit-button[type='submit][name='btn']")).click();
 		
 		
 //		driver.close();
