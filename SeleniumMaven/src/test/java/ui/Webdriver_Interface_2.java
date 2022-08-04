@@ -25,23 +25,23 @@ public class Webdriver_Interface_2 {
 			driver = new EdgeDriver();
 		}
 
-		//get() 	
+		// get()
 		driver.get("https://saucedemo.com");
-		//manage()
+		// manage()
 		driver.manage().window().maximize();
-		//getCurrentUrl()
+		// getCurrentUrl()
 		String currenturl = driver.getCurrentUrl();
 		System.out.println(currenturl);
-		//getTitle()
+		// getTitle()
 		driver.getTitle();
 		String title = driver.getTitle();
 		System.out.println(title);
-		//pageSource()
+		// pageSource()
 		String pagesource = driver.getPageSource();
 		System.out.println(pagesource);
-		//navigate
+		// navigate
 		driver.navigate().to("https://developer.salesforce.com/signup");
-		//quit() or close()
+		// quit() or close()
 		driver.close();
 
 	}
