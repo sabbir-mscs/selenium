@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Webdriver_Interface_1 {
+public class Webdriver_WebElements_Radio {
 
 	public static String browser = "chrome"; // External configuration - XLS, CSV
 	public static WebDriver driver;

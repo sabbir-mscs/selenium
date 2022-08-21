@@ -64,7 +64,7 @@ public class Webdriver_WebElements_DropDown_P2 {
 		select.deselectAll();
 		Thread.sleep(2000);
 
-		// !Tested for practice
+		// !Tested for another form
 		driver.navigate().to("https://auth.applitools.com/users/register");
 		WebElement appDropdown = driver.findElement(By.name("country"));
 
